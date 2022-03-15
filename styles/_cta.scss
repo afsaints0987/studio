@@ -1,0 +1,56 @@
+#cta {
+    background: $mainColor;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h6 {
+        color: $secondaryColor;
+        position: relative;
+        max-width: 600px;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        &:before {
+            content: "";
+            width: 4rem;
+            height: 1px;
+            position: absolute;
+            left: -5rem;
+            top: 40%;
+            background: $secondaryColor;
+            display: block;
+
+            @include mobile {
+                left: 5rem;
+            }
+        }
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 3.5rem;
+        color: #eadece;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+    a {
+        padding: 0.5rem 1rem !important;
+        font-size: 10px;
+        text-align: center;
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}

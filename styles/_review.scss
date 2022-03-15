@@ -1,0 +1,113 @@
+#reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $primaryColor;
+
+    h6 {
+        color: $secondaryColor;
+        position: relative;
+        max-width: 600px;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        &:before {
+            content: "";
+            width: 4rem;
+            height: 1px;
+            position: absolute;
+            left: -5rem;
+            top: 40%;
+            background: $secondaryColor;
+            display: block;
+
+            @include mobile {
+                left: 5rem;
+            }
+        }
+    }
+    h3 {
+        font-size: 2rem;
+        color: $mainColor;
+        font-weight: 400;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+    #review {
+        padding: 1.5rem 3rem;
+        background: $secondaryColor;
+        line-height: 2rem;
+        
+        h5,p {
+            color: $primaryColor;
+            text-align: center;
+            font-family: $serif;
+        }
+        h5 {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        p {
+            font-size: 12px;
+            margin-bottom: 1rem;
+        }
+        .inline-form {
+            display: flex;
+            justify-content: center;
+
+            @include mobile {
+                flex-direction: column;
+            }
+            
+            input, button {
+                padding: 0.5rem 0.75rem;
+                border: none;
+                margin-left: 5px;
+
+                @include mobile {
+                    margin-bottom: 5px;
+                    align-self: center;
+                    text-align: center;
+                }
+            }
+            input {
+                width: 10.5rem;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                &::placeholder {
+                    font-style: italic;
+                    color: $mainColor;
+                    font-size: 12px;
+                    font-family: $serif;
+                }
+            }
+            button {
+                background: $mainColor;
+                font-family: $serif;
+                text-transform: uppercase;
+                color: $primaryColor;
+                font-size: 10px;
+                width: 5rem;
+                
+                @include mobile {
+                    width: 100%;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                    transition: opacity 0.2s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

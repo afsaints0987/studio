@@ -1,0 +1,36 @@
+.header_container {
+    background: $mainColor;
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 40px;
+
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #logo {
+            color: $secondaryColor;
+            font-size: 30px;
+
+            @include mobile {
+                margin-bottom: 2rem;
+            }
+
+        }
+        .nav-links {
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-family: $sansSerif;
+            font-size: 10px;
+            color: $subColor;
+            &:hover {
+                opacity: 0.75;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

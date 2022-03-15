@@ -1,0 +1,32 @@
+#footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+    background: $subColor;
+    border-top: 1px solid $primaryColor;
+
+    .footer_nav {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: $serif;
+
+        .footer_nav_links {
+            border-bottom: 1px solid $mainColor;
+            color: $mainColor;
+            font-weight: 500;
+            margin-right: 8px;
+
+            &:hover {
+                font-weight: bold;
+                transition: font-weight 0.2s ease-in-out;
+            }
+        }
+    }
+
+    p {
+        color: $mainColor;
+        font-size: 10px;
+        align-self: flex-end;
+        text-align: right;
+    }
+}

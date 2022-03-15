@@ -1,0 +1,39 @@
+#hero_banner {
+    background: $mainColor;
+    color: $subColor;
+    h1 {
+        font-weight: 400;
+        font-size: 3.5rem;
+        color: #eadece;
+
+        @include mobile {
+            text-align: center;
+            font-size: 3rem;
+            margin: 1rem -3.5rem;
+        }
+    }
+    h6 {
+        color: $secondaryColor;
+        position: relative;
+        max-width: 600px;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        &:before {
+            content: "";
+            width: 4rem;
+            height: 1px;
+            position: absolute;
+            left: -5rem;
+            top: 40%;
+            background: $secondaryColor;
+            display: block;
+
+            @include mobile {
+                left: 5rem;
+            }
+        }
+    }
+}

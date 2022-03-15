@@ -1,0 +1,115 @@
+// Global CSS
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+$mainColor: #42442f;
+$subColor: #f7f4ef;
+$primaryColor: #ffffff;
+$secondaryColor: #dc9a77;
+
+$serif: 'EB Garamond', serif;
+$sansSerif: 'Montserrat', sans-serif;
+
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 600px;
+
+
+//Media Queries 
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include desktop {
+        margin: 0 20rem;
+    }
+}
+
+h1, h3, h4 {
+    font-family: $serif;
+}
+
+
+h6 {
+    font-family: $sansSerif;
+    text-transform: uppercase;
+}
+
+.section_container {
+    padding: 4rem 8rem;    
+
+    @include mobile {
+        padding: 2rem 4rem;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.italic {
+    font-style: italic;
+}
+.cta {
+    background: $secondaryColor;
+    padding: 5px 10px;
+    color: $subColor;
+    text-transform: uppercase;
+    font-family: $sansSerif;
+    font-size: 10px;
+}
+// Header / Navigation
+@import "./header";
+
+// Hero-Banner
+@import "./banner";
+
+// Services Section
+@import "./services";
+
+// Packages Section
+@import "./packages";
+
+// Reviews Section
+@import "./review";
+
+// Call to Action
+@import "./cta";
+
+// Contact / Newsletter
+@import "./contact";
+
+// Footer
+@import "./footer";
+
+
+
+
+
